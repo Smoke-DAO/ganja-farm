@@ -1,0 +1,41 @@
+version: '3.8'
+
+services:
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    ports:
+      - "80:80"
+    environment:
+      - VITE_API_URL=http://localhost:3001
+    depends_on:
+      - backend
+    cap_add:
+      - NET_BIND_SERVICE
+
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile.app
+    ports:
+      - "3001:3001"
+    environment:
+      - NODE_ENV=development
+      - PORT=3001
+      - MONGO_URL=mongodb://dbuser:secretpassword@mongodb:27017/?authSource=admin
+    depends_on:
+      - mongodb
+
+  mongodb:
+    image: mongo:latest
+    ports:
+      - "27018:27017"
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: dbuser
+      MONGO_INITDB_ROOT_PASSWORD: secretpassword
+    volumes:
+      - mongodb_data:/data/db
+
+volumes:
+  mongodb_data:

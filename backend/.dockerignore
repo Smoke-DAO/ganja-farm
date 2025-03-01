@@ -1,0 +1,8 @@
+node_modules
+dist
+coverage
+.env
+.idea
+.git
+.gitignore
+*.log

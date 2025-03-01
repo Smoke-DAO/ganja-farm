@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/static/css/main.05fbaaac.css",
+    "main.js": "/static/js/main.1f2e25d7.js",
+    "static/media/PressStart2P-Regular.ttf": "/static/media/PressStart2P-Regular.21503c6a5385ab41dde9.ttf",
+    "index.html": "/index.html",
+    "main.05fbaaac.css.map": "/static/css/main.05fbaaac.css.map",
+    "main.1f2e25d7.js.map": "/static/js/main.1f2e25d7.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.05fbaaac.css",
+    "static/js/main.1f2e25d7.js"
+  ]
+}

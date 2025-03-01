@@ -1,0 +1,97 @@
+* {
+  font-family: "pressStart2P", Arial, sans-serif;
+}
+
+html,
+body {
+  overflow: hidden;
+}
+
+* {
+  user-select: none;
+  -webkit-touch-callout: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+@font-face {
+  font-family: pressStart2P;
+  src: url(../PressStart2P-Regular.ttf);
+}
+
+.plant-modal,
+.harvest-modal,
+.market-modal,
+.new-player-modal {
+  background: #ac7339;
+  width: 400px;
+  position: absolute;
+  margin: auto;
+  padding: 40px 20px;
+  left: 0;
+  right: 0;
+  display: grid;
+  place-items: center;
+  top: 30vh;
+  border-radius: 8px;
+  border: 4px solid #754a1e;
+}
+
+@media screen and (max-width: 640px) {
+  .plant-modal,
+  .harvest-modal,
+  .market-modal,
+  .new-player-modal {
+    width: 300px;
+  }
+}
+
+a:link,
+a:visited,
+a:hover,
+a:active {
+  text-decoration: none;
+}
+
+.market-header {
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+}
+
+.sell {
+  margin-top: 40px;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
+
+h1 {
+  animation: colorRotate 6s linear 0s infinite;
+}
+
+@keyframes colorRotate {
+  from {
+    color: #6666ff;
+  }
+  10% {
+    color: #0099ff;
+  }
+  50% {
+    color: #00ff00;
+  }
+  75% {
+    color: #ff3399;
+  }
+  100% {
+    color: #6666ff;
+  }
+}
